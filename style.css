@@ -308,6 +308,13 @@ h3 {
     margin-bottom: 8px;
 }
 
+/* T04-3 RESPONSIVE SVG */
+.responsive-svg-container {
+    margin: 0 auto; /* center */
+    width: 100%; /* fill parent width */
+    max-width: 1200px; /* cap max width */
+}
+
 /* FOOTER */
 footer {
     background-color: #20263d;
