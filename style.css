@@ -1,0 +1,390 @@
+/* GENERAL PAGE STYLING */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #17213c;
+    background-color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    background-color: #20263d;
+    border-bottom: 3px solid #f2b01e;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* POWER LOGO */
+#logo {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#logo:hover {
+    transform: scale(1.08);
+}
+
+
+/* NAVIGATION LINKS */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links button {
+    border: none;
+    background: transparent;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/* Mouse-over feedback */
+.nav-links button:hover {
+    background-color: #3a4056;
+    color: #f2b01e;
+}
+
+/* Current page */
+.nav-links button.active {
+    background-color: #f2b01e;
+    color: #17213c;
+}
+
+/* MAIN CONTENT */
+main {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 35px 25px 50px;
+    flex: 1;
+}
+
+/* INDIVIDUAL PAGES */
+.page {
+    display: none;
+}
+
+/* MAIN HEADINGS */
+h1 {
+    margin-top: 0;
+    font-size: 36px;
+    color: #17213c;
+}
+
+h2 {
+    color: #17213c;
+}
+
+h3 {
+    color: #17213c;
+}
+
+/* PAGE INTRODUCTION */
+.hero,
+.page-heading {
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    margin-bottom: 8px;
+}
+
+.hero h2 {
+    margin-top: 0;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+/* INFORMATION CARDS */
+.card {
+    background-color: #fffdf5;
+    border: 1px solid #dedede;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+/* Lists inside cards */
+.card ul {
+    padding-left: 20px;
+}
+
+.card li {
+    margin-bottom: 8px;
+}
+
+/* T03 DATA STORY INTRODUCTION */
+.story-intro {
+    background-color: #fffdf5;
+    border-left: 5px solid #f2b01e;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 35px;
+}
+
+.story-intro h1 {
+    margin-bottom: 10px;
+}
+
+.story-intro p {
+    margin-bottom: 0;
+
+    font-size: 17px;
+}
+
+/* T03 STORY SECTIONS */
+.story-section {
+    margin-bottom: 40px;
+}
+
+.story-section > h2 {
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+.story-section > p {
+    margin-top: 0;
+
+    margin-bottom: 20px;
+}
+
+/* DATA VISUALISATIONS */
+.visualisations {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.visualisations > h2 {
+    margin-bottom: 8px;
+    font-size: 28px;
+    color: #17213c;
+}
+
+.visualisations > p {
+    color: #5f667a;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+/* CHART CARDS */
+
+.chart {
+    background-color: #ffffff;
+    border: 1px solid #dedede;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Chart card hover effect */
+.chart:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+/* CHART TITLES */
+.chart h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #17213c;
+    font-size: 20px;
+}
+
+/* CHART IMAGES */
+.chart img {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    border: 1px solid #eeeeee;
+}
+
+/* CHART EXPLANATION */
+.chart p {
+    margin: 0;
+    padding: 15px 18px;
+    background-color: #f8f9fc;
+    border-left: 4px solid #f2b01e;
+    border-radius: 6px;
+    color: #444b5f;
+    font-size: 15px;
+}
+
+/* INSIGHT BOX */
+.insight {
+    margin-top: 15px;
+    padding: 15px 18px;
+    background-color: #fffdf5;
+    border-left: 4px solid #f2b01e;
+    border-radius: 6px;
+    color: #444b5f;
+}
+
+.insight strong {
+    color: #17213c;
+}
+
+/* CONCLUSION */
+.conclusion {
+    background-color: #20263d;
+    color: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.conclusion h2 {
+    color: #f2b01e;
+    margin-top: 0;
+}
+
+.conclusion p {
+    margin-bottom: 12px;
+}
+
+.conclusion p:last-child {
+    margin-bottom: 0;
+}
+
+/* ENERGY TIPS */
+.energy-tips {
+    background-color: #fffdf5;
+    border: 1px solid #dedede;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.energy-tips h2 {
+    margin-top: 0;
+}
+
+.energy-tips ul {
+    padding-left: 20px;
+}
+
+.energy-tips li {
+    margin-bottom: 8px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #20263d;
+    border-top: 3px solid #f2b01e;
+    color: white;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-container p {
+    margin: 0;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 700px) {
+
+    /* Navigation */
+    .nav-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Main content */
+    main {
+        padding: 25px 15px;
+    }
+
+    /* Headings */
+    h1 {
+        font-size: 30px;
+    }
+
+    .visualisations > h2 {
+        font-size: 24px;
+    }
+
+    .story-section > h2 {
+        font-size: 24px;
+    }
+
+    /* Chart cards */
+    .chart {
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    .chart h3 {
+        font-size: 18px;
+    }
+
+    .chart img {
+        width: 100%;
+    }
+
+    /* T03 sections */
+    .story-intro,
+    .conclusion,
+    .energy-tips {
+        padding: 18px;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
