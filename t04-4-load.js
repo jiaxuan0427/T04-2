@@ -1,7 +1,7 @@
 /* Load CSV, Convert Type, Quick Check */
 d3.csv("data/tvBrandCount.csv", d => ({
-brand: d.brand,
-count: +d.count
+    brand: d.brand,
+    count: +d.count
 })).then(data => {
 // Quick check
 console.log(data); // whole array

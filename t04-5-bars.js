@@ -14,11 +14,14 @@ const createBarChart = (data) => {
         .style("border", "1px solid #ccc");
 
     // --- Scales (from T04-6) ---
+    // Using x = 100 so labels align at 100 and bars start there too.
+    const labelX = 100;
+
     const xMax = d3.max(data, d => d.count);
 
     const xScale = d3.scaleLinear()
         .domain([0, xMax])
-        .range([0, viewW]);
+        .range([0, viewW - labelX -30]);
 
     const yScale = d3.scaleBand()
         .domain(data.map(d => d.brand)) 
@@ -38,8 +41,6 @@ const createBarChart = (data) => {
     */
 
     // --- NEW in T04-7: group per row (bar + labels move together) ---
-    // Using x = 100 so labels align at 100 and bars start there too.
-    const labelX = 100;
     const barAndLabel = svg
         .selectAll("g")
         .data(data)
